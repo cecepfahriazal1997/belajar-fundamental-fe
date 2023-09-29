@@ -1,0 +1,93 @@
+body {
+    padding-bottom: 30px;
+}
+
+header .icon img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+#banner img {
+    width: 100%;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+#banner .cover {
+    position: relative;
+    width: 100%;
+}
+
+.type-movie h5 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.type-movie .title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.type-movie .description {
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+.list-movie {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    overflow-x: auto;
+}
+
+.list-movie .thumbnail {
+    background-image: url('https://www.themoviedb.org/t/p/w220_and_h330_face/51tqzRtKMMZEYUpSYkrUE7v9ehm.jpg');
+    width: 150px;
+    height: 200px;
+    background-size: auto;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.about {
+    text-align: center;
+}
+
+.about .description {
+    font-size: 1.6rem;
+}
+
+.about table td {
+    text-align: left;
+}
+
+.about .label {
+    font-weight: 400;
+    color: #d0d0d0;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px !important;
+    height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #dedede;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #bfbfbf;
+}
