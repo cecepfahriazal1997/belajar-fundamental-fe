@@ -15,7 +15,7 @@ class ItemMovie extends HTMLElement {
     render() {
         const dateString = this._detail?.release_date ? moment(new Date(this._detail.release_date)).format('MMM DD, yyyy') : ''
         this.innerHTML = `
-        <div class="mb-3">
+        <div class="item-movie mb-3">
             <div class="thumbnail" style="background-image: url('${baseUrlImage}${this._detail.poster_path}')"></div>
             <div class="d-block">
                 <div class="title">${this._detail?.title}</div>
