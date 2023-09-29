@@ -46,10 +46,9 @@ header .icon img {
 }
 
 .list-movie .thumbnail {
-    background-image: url('https://www.themoviedb.org/t/p/w220_and_h330_face/51tqzRtKMMZEYUpSYkrUE7v9ehm.jpg');
     width: 150px;
     height: 200px;
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     border-radius: 10px;
 }
@@ -68,7 +67,7 @@ header .icon img {
 
 .about .label {
     font-weight: 400;
-    color: #d0d0d0;
+    color: #4a4a4a;
 }
 
 /* width */
