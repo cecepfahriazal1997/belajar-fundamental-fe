@@ -14,7 +14,7 @@ export default class ApiServices {
         this.api = api
     }
 
-    static async get(uri = '', params = {}) {
+    static get(uri = '', params = {}) {
         return new Promise((resolve, reject) => {
             let baseUrl = uri ? `/${uri}` : ''
             api.get(baseUrl, {
