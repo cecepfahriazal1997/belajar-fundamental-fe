@@ -45,5 +45,10 @@ module.exports = {
         magicHtml: true,
         watchFiles: ['src/**/*'],
         open: true,
-    }
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+        },
+    },
 };
