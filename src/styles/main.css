@@ -113,6 +113,21 @@ header .icon img {
     transition: 0.2s all ease-in-out;
 }
 
+.swiper {
+    width: 100%;
+    height: auto;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: white;
+    box-shadow: 5px 5px 5px #00000029;
+    top: 0;
+    transition: 300ms linear 0s;
+    padding: 10px;
+    z-index: 10000;
+}
 /* width */
 ::-webkit-scrollbar {
     width: 10px !important;

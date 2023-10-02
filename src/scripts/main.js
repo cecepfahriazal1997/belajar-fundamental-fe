@@ -1,5 +1,16 @@
 // import services
 import ApiServices from "./services/api-service"
+// import Swiper JS
+import Swiper from 'swiper';
+import {
+    Pagination,
+    Autoplay
+} from 'swiper/modules';
+
+// import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 // import components
 import './components/card-movie.js'
@@ -8,6 +19,8 @@ export default class Main {
         document.addEventListener('DOMContentLoaded', () => {
             // init menu
             this.initMenu()
+            // init banner
+            this.initBanner()
             // fetch data popular movie
             this.fetchMovie('popular')
             // fetch data top rated movie
@@ -15,6 +28,28 @@ export default class Main {
             // fetch data upcoming movie
             this.fetchMovie('upcoming')
         })
+    }
+
+    // init swiper
+    static initBanner() {
+        const swiper = new Swiper(".banner", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            modules: [Autoplay, Pagination],
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
     }
 
     // init menu
@@ -44,6 +79,18 @@ export default class Main {
                 movie.classList.add('d-none')
             }
         })
+
+
+        var menuSticky = document.getElementById("header");
+        window.document.addEventListener('scroll', function () {
+            var scroll = window.scrollY
+
+            if (scroll >= 200) {
+                menuSticky.classList.add("sticky");
+            } else {
+                menuSticky.classList.remove("sticky");
+            }
+        });
     }
 
     // set active menu when change page
@@ -70,7 +117,7 @@ export default class Main {
         if (dataListMovie) {
             let listMovie = document.querySelectorAll('card-movie');
             let index = 0
-    
+
             if (type == 'popular') {
                 index = 0
                 dataListMovie.title = "Popular"
@@ -81,7 +128,7 @@ export default class Main {
                 index = 2
                 dataListMovie.title = "Upcoming"
             }
-            
+
             listMovie[index].data = dataListMovie
             // console.log(dataListMovie);
         }
