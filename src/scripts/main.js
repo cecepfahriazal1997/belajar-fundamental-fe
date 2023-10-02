@@ -35,8 +35,8 @@ export default class Main {
         })
 
         // event listener for about menu
-        listMenu[3].addEventListener('click', () => {
-            this.setActiveMenu(listMenu, 3)
+        listMenu[1].addEventListener('click', () => {
+            this.setActiveMenu(listMenu, 1)
             document.getElementsByClassName('about')[0].classList.remove('d-none')
             document.getElementsByClassName('about')[0].classList.toggle('transition');
             banner.classList.add('d-none')
