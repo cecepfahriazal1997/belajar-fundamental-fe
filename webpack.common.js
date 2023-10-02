@@ -5,7 +5,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: '[name][contenthash].js',
+        clean: true
     },
     module: {
         rules: [{
@@ -23,8 +24,8 @@ module.exports = {
                 type: 'asset/resource',
             },
             {
-              test: /\.html$/i,
-              loader: "html-loader",
+                test: /\.html$/i,
+                loader: "html-loader",
             },
         ]
     },
@@ -38,5 +39,11 @@ module.exports = {
         hints: false,
         maxEntrypointSize: 512000,
         maxAssetSize: 512000
+    },
+    devServer: {
+        hot: true,
+        magicHtml: true,
+        watchFiles: ['src/**/*'],
+        open: true,
     }
 };
