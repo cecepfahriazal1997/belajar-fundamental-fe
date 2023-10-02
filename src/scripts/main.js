@@ -80,7 +80,7 @@ export default class Main {
             }
         })
 
-
+        // set menu to sticky mode when scrolling
         var menuSticky = document.getElementById("header");
         window.document.addEventListener('scroll', function () {
             var scroll = window.scrollY
